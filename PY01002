@@ -1,0 +1,8 @@
+str=input()
+n1=int(str[0])
+n2=int(str[4])
+n3=int(str[8])
+if (n1+n2==n3):
+    print("YES")
+else :
+    print("NO")
