@@ -1,0 +1,7 @@
+n= int (input())
+m={"-1"}
+for i in range (n):
+    a= input()
+    m.add(a)
+st=set(m)
+print (len(st)-1)
