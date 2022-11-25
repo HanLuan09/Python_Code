@@ -1,0 +1,17 @@
+import math
+F=[0]*1000001
+def NT():
+    F[1]=1
+    for i in range (2,int(math.sqrt(1000000))+1):
+        if F[i]==0:
+            for j in range(i*i,1000000,i):
+                F[j]=1
+NT()
+t=int(input())
+for i in range(t):
+    n=int (input())
+    for i in range(13,n):
+        k= int(str(i)[::-1])
+        if(k>i and k<n and F[i]==0 and F[k]==0):
+            print(i,k,end=" ")
+    print()
