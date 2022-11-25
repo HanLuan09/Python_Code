@@ -1,0 +1,18 @@
+t=int(input())
+for x in range(0,t):
+    s=input()
+    s=s+'m'
+    a=10 ** 20
+    tmp=0
+    for i in s:
+        if i=='0' :
+            a=0
+            break
+        elif i.isdigit():
+            tmp=tmp*10+int(i)
+        else :
+            if tmp!=0 : a=min(tmp,a)
+            tmp=0
+    print(a)
+
+
