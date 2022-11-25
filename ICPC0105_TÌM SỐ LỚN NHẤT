@@ -1,0 +1,13 @@
+t=int(input())
+for x in range(0,t):
+    s=input()
+    s=s+'m'
+    a=0
+    tmp=0
+    for i in s:
+        if i.isdigit():
+            tmp=tmp*10+int(i)
+        else :
+            a=max(tmp,a)
+            tmp=0
+    print(a)
