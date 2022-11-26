@@ -1,0 +1,54 @@
+
+class Sophuc:
+    def __init__(self, thuc, ao):
+        self.thuc = thuc
+        self.ao = ao
+    def __str__(self):
+        a = abs(self.ao)
+        if self.ao>0:
+            return "{} + {}i".format(self.thuc,self.ao)
+        else: return "{} - {}i".format(self.thuc,a)
+    # def Tong(self , x):
+    #     a = self.thuc + x.thuc
+    #     b = self.ao + x.ao
+    #     self.thuc = a
+    #     self.ao = b
+
+    # def Tich(self, x):
+    #     a= self.thuc * x.thuc - self.ao * x.ao
+    #     b= self.thuc * b.ao + self.ao * b.thuc
+    #     self.thuc = a
+    #     self.ao = b
+def cong(s1:Sophuc,s2:Sophuc):
+    a= s1.thuc + s2.thuc
+    b= s1.ao + s2.ao
+    return Sophuc(a,b)
+def tich(s1:Sophuc,s2:Sophuc):
+    a= s1.thuc * s2.thuc - s1.ao * s2.ao
+    b= s1.thuc * s2.ao + s1.ao * s2.thuc
+    return Sophuc(a,b)
+    
+# if __name__ == '__main__':
+t=int(input())
+for i in range(t):
+    s = [int(x) for x in input().split()]
+    a = Sophuc(s[0], s[1])
+    b = Sophuc(s[2], s[3])
+    sp3 = cong(a,b)
+    sp4 = tich(sp3,a)
+    sp5 = tich(sp3,sp3)
+    # print(sp4.output(),end="")
+    # print(", ",end="")
+    # print(sp5.output())
+    print(sp4,", ",sp5,sep="")
+
+
+
+
+
+
+
+
+
+
+
