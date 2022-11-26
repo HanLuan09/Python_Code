@@ -1,0 +1,21 @@
+import math
+def NguyenTo(n):
+    if(n<2):
+        return False
+    tmp=int(math.sqrt(n))
+    for i in range(2,tmp+1):
+        if(n%i==0) :
+            return False
+    return True
+t=int (input())
+for x in range (0,t):
+    n,m=[int(x) for x in input().split()]
+    tmp=math.gcd(n,m)
+    s=0
+    while(tmp>0):
+        s+=tmp%10;
+        tmp=int(tmp/10)
+    if NguyenTo(s)==True :
+        print("YES")
+    else :
+        print("NO")
