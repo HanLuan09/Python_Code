@@ -1,0 +1,24 @@
+from math import gcd
+from re import M
+
+class Phanso:
+    def __init__(self,tu,mau) :
+        self.tu = tu
+        self.mau = mau
+    def RutGon(self):
+        UCLN = gcd(self.tu, self.mau)
+        self.tu = int(self.tu/UCLN)
+        self.mau = int(self.mau/UCLN)
+        return '{}/{}'.format(self.tu , self.mau)
+    def Tong(self, b):
+        n = self.mau * b.mau 
+        m = self.tu * b.mau + self.mau * b.tu
+        self.tu = m 
+        self.mau = n
+
+if __name__=='__main__':
+    a = input().split()
+    x = Phanso(int(a[0]),int(a[1]))
+    y= Phanso(int(a[2]), int(a[3]))
+    x.Tong(y)
+    print(x.RutGon())
