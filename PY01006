@@ -1,0 +1,12 @@
+t=int(input())
+for x in range(0,t):
+
+    str = input()
+    n=0
+    for i in range (len(str)):
+        if (str[i]=='4' or str[i]=='7'):
+            n=n+1;
+    if (n==len(str)):
+        print("YES")
+    else :
+        print("NO")
