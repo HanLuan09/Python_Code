@@ -1,0 +1,10 @@
+t=int(input())
+for i in range(t):
+    s=input()
+    ok=1
+    for i in s:
+        if i!='0' and i!='1' and i!='2':
+            ok=0
+            break
+    if ok==1 : print("YES")
+    else : print("NO")
