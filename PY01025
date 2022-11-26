@@ -1,0 +1,8 @@
+s=input()
+dem=1
+kq=""
+for i in range (len(s)):
+    kq=s[-i-1]+kq
+    if dem%3==0: kq=","+kq
+    dem=dem+1
+print(kq.strip(','))
