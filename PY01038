@@ -1,0 +1,14 @@
+t=int(input())
+for i in range(t):
+    s=input()
+    n=int(s)
+    dem=0
+    ok=0
+    while(n%7!=0):
+        dem+=1
+        n=n+int(s[::-1])
+        s=str(n)
+        if(dem>=1000) :
+            ok=1
+            break
+    print(n)
