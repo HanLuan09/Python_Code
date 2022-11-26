@@ -1,0 +1,12 @@
+import math
+
+t=int(input())
+for i in range(t):
+    n=input()
+    m=""
+    for i in n: 
+        m=i+m
+    if math.gcd(int(n),int(m))==1 :
+        print("YES")
+    else:
+        print("NO")
