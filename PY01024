@@ -1,0 +1,18 @@
+import math
+def Check(s):
+    sum=int(s[0])
+    for i in range (1,len(s)):
+        sum+=int(s[i])
+        if(abs(int(s[i])-int(s[i-1]))!=2) :
+            return False
+    if sum%10 !=0 :
+        return False
+    return True
+t=int(input())
+for x in range(t):
+    s=input()
+    if Check(s):
+        print("YES")
+    else:
+        print("NO")
+
