@@ -1,0 +1,12 @@
+from tokenize import Double
+
+t=int(input())
+for x in range(0,t):
+    a,b,c=[float(x) for x in input().split()]
+    b=float(b/100)
+    Year=0
+    while a<c:
+        a=float(a+a*b)
+        Year+=1
+    print(Year)
+
