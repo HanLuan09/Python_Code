@@ -1,0 +1,19 @@
+import queue
+b = ['0', '2', '4', '6', '8']
+test = int(input())
+for i in range(test):
+    n = int(input())
+    q = queue.Queue()
+    q.put("2")
+    q.put("4")
+    q.put("6")
+    q.put("8")
+    while not q.empty():
+        tmp = q.get()
+        x = tmp+tmp[::-1]
+        if (int(x) >= n):
+            break
+        print(x, end=" ")
+        for i in b:
+            q.put(tmp+i)
+    print()
