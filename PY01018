@@ -1,0 +1,15 @@
+P= "ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
+while True :
+    x=input()
+    if x=='0' : break
+    k,s =x.split()
+    k=int(k)
+    kq=""
+    for i in s:
+        n=0
+        for j in P:
+            if i==j: break
+            n+=1
+        n=(n+k)%28
+        kq=P[n]+kq
+    print(kq)
