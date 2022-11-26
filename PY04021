@@ -1,0 +1,21 @@
+
+class TimeGame:
+    def __init__(self,ma,ten,giovao,giora):
+        self.ma = ma
+        self.ten = ten
+        self.time = int(giora[0])*60+int(giora[1])-(int(giovao[0])*60+int(giovao[1]))
+
+    def output(self):
+        print(self.ma,self.ten, int(self.time/60), 'gio',  self.time%60 ,'phut')
+
+t = int(input())
+a = []
+for i in range(t):
+    ma = input()
+    ten = input()
+    giovao = [int(x) for x in input().split(':')]
+    giora = [int(x) for x in input().split(':')]
+    a.append(TimeGame(ma,ten,giovao,giora))
+a = sorted(a, key = lambda x : (-x.time))
+for i in a:
+    i.output()
