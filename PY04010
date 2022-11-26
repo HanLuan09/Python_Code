@@ -1,0 +1,22 @@
+from decimal import Decimal
+
+class Thisinh:
+    def __init__(self, name, date, count1, count2, count3 ):
+        self.name = name
+        self.date = date
+        self.count1 = count1
+        self.count2 = count2
+        self.count3 = count3
+    
+    def output(self):
+        return "{} {} {:.1f}".format(self.name , self.date, (self.count1 + self.count2+ self.count3))
+    
+if __name__ == '__main__':
+    a=input()
+    b=input()
+    d1=input()
+    d2=input()
+    d3=input()
+    x=Thisinh(a,b,Decimal(d1), Decimal(d2),Decimal(d3))
+    print(x.output())
+
