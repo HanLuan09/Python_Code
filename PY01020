@@ -1,0 +1,9 @@
+t=int(input())
+for i in range (t):
+    S=input()
+    if len(S)<2 : print("NO")
+    else :
+        if(S[-1]=='6' and S[-2]=='8'):
+            print("YES")
+        else :
+            print("NO")
