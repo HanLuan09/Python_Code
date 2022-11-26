@@ -1,0 +1,23 @@
+import math
+def NT(x):
+    if x<2: return False
+    for i in range(2,int(math.sqrt(x))+1):
+        if x%i==0: return False
+    return True
+
+def Check(s):
+    if NT(len(s))==False: return False
+    dem1=0
+    dem2=0
+    for i in s:
+        if i=='2' or i=='3' or i=='5' or i=='7': dem1+=1
+        else : dem2+=1
+    if dem1<=dem2 : return False
+    return True
+
+t=int(input())
+for i in range (t):
+    s=input()
+    if Check(s)==True: print("YES")
+    else : print("NO") 
+
