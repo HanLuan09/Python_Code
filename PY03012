@@ -1,0 +1,15 @@
+class SV :
+    def __init__(self, name, ac, submit):
+        self.name = name
+        self.ac = ac
+        self.submit = submit
+
+n = int(input())
+a = []
+for i in range(n) :
+    name = input()
+    ac, submit = [int(x) for x in input().split()]
+    a.append(SV(name, ac, submit))
+a = sorted(a, key = lambda x : (-x.ac, x.submit, x.name))
+for i in a :
+    print(i.name, i.ac, i.submit)
