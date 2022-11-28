@@ -1,0 +1,18 @@
+
+class MonThi:
+    def __init__(self,maM, tenM, hinhthuc):
+        self.maM = maM
+        self.tenM = tenM
+        self.hinhthuc = hinhthuc
+    def output(self):
+        print(self.maM, self.tenM, self.hinhthuc)
+t = int(input())
+a = []
+for i in range(t):
+    ma = input()
+    ten = input()
+    ht = input()
+    a.append(MonThi(ma, ten, ht))
+a = sorted(a, key = lambda x : (x.maM))
+for i in a:
+    i.output()
