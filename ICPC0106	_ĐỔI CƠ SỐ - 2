@@ -1,0 +1,24 @@
+import math
+f = ['0', '1', '2', '3', '4', '5', '6', '7',
+     '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+t = int(input())
+for i in range(t):
+    n = int(input())
+    x = input()
+    if n == 2:
+        print(x)
+    else:
+        s = x[::-1]
+        sum10 = 0
+        for i in range(len(s)):
+            if (s[i] != '0'):
+                k = int(i)
+                sum10 += pow(2, k)
+        if n == 10:
+            print(sum10)
+        else:
+            kq = ""
+            while (sum10 > 0):
+                kq = f[sum10 % n]+kq
+                sum10 = int(sum10//n)
+            print(kq)
