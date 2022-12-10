@@ -1,0 +1,15 @@
+F=[0,1,1]
+x1=1
+x2=1
+for i in range(2,93):
+    tmp=x1+x2
+    F=F+[tmp]
+    x2=x1
+    x1=tmp
+
+t=int(input())
+for i in range(t):
+    a,b=[int(x) for x in input().split()]
+    for i in range (a,b+1):
+        print(F[i],end=" ")
+    print()
