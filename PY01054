@@ -1,0 +1,9 @@
+t=int(input())
+for x in range(0,t):
+    s=input()
+    tmp=1;
+    for i in s:
+        if i!='0':
+            tmp*=int(i)
+    
+    print(tmp)
