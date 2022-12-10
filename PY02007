@@ -1,0 +1,13 @@
+b=[0]*42
+n=0
+while True :
+   
+    a=[int(x) for x in input().split()]
+    n+=len(a)
+    for i in a:
+        b[i%42]=1
+    if(n==10): break
+dem=0
+for i in b:
+    if i>0: dem+=1
+print(dem)
