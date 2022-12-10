@@ -1,0 +1,15 @@
+t=int(input())
+for i in range(t):
+    s=input()
+    sum=0
+    tich=1
+    ok=0
+    for i in range(0,len(s)):
+        if i%2 !=0 : sum+=int(s[i])
+        else :
+            if s[i]!='0':
+                ok=1
+                tich*=int(s[i])
+    if ok==0 : print(0,end=" ")
+    else : print(tich,end=" ")
+    print(sum)
