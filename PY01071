@@ -1,0 +1,6 @@
+s=input()
+tmp=s[-3::]
+if tmp.lower()==".py":
+    print("yes")
+else:
+    print("no")
