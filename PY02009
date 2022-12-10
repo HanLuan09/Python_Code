@@ -1,0 +1,16 @@
+t=int(input())
+for x in range(t):
+    n=int(input())
+    b={}
+    for i in range(n):
+        a=int(input())
+        if a in b: b[a]+=1
+        else : b[a]=1
+    kq=0
+    for i in b:
+        if b[i]>kq:
+            kq=b[i]
+            p=i
+        elif kq==b[i]:
+            p=min(p,i)
+    print(p)
