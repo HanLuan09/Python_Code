@@ -1,0 +1,13 @@
+import math
+t=int(input())
+for i in range(t):
+    n=int(input())
+    a=sorted([int(x) for x in input().split()])
+    b=sorted ([int(x) for x in input().split()])
+    check=0
+    for i in range(n):
+        if(a[i]>b[i]):
+            check=1
+            break
+    if check==0: print("YES")
+    else : print("NO")
