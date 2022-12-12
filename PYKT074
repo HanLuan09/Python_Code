@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    mess = input()
+    res = mess[:100]
+    a,b = mess.split(), res.split()
+    if b[-1] == a[len(b)-1]:
+        print(res)
+    else:
+        tmp = 99
+        while(res[tmp]!= ' '):
+            tmp-=1
+        print(res[:tmp])
