@@ -1,0 +1,10 @@
+import re
+from collections import Counter
+t, k = [int(x) for x in input().split()]
+s=""
+for _ in range(t):
+    s += input() + " "
+myList = sorted(re.findall(r"[\w]+", s.lower()))
+for key, value in sorted(Counter(myList).items(), key=lambda i: i[1], reverse=True):
+    if int(value) >= k:
+        print(key, value)
