@@ -1,0 +1,16 @@
+t= int(input())
+ok,a,loai=0,[],[]
+for i in range (t):
+    s= input().split()
+    if len(a)==0 and len(s)==6:
+        loai.append(1)
+    a.append(s)
+    if len(a)>1 and len(s)==6 and len(a[-2])==7:
+        loai.append(1)
+    if len(s)==7: ok+=1
+    if ok==4:
+        loai.append(2)
+        ok=0
+print(len(loai))
+for i in loai:
+    print(i)
