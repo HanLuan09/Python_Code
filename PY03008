@@ -1,0 +1,20 @@
+n = int(input())
+x ={}
+for _ in range(n-1):
+    a, b = [int(x) for x in input().split()]
+    if a in x:
+        x[a]+=1
+    else :
+        x[a]=1
+    if b in x:
+        x[b]+=1
+    else :
+        x[b]=1
+check =0
+for i in x:
+    if(x[i]!=1 and x[i]!= n-1):
+        print("No")
+        check =1
+        break
+if check == 0 :
+    print("Yes")
