@@ -1,0 +1,14 @@
+t=1
+for i in range(t):
+    n=int(input())
+    a=[float(x) for x in input().split()]
+    Max= max(a)
+    Min=min(a)
+    demMax=0
+    demMin=0
+    sum=0
+    for i in a:
+        sum+=i
+        if i==Max: demMax+=1
+        elif i==Min: demMin+=1
+    print("{:.2f}".format((sum-Max*demMax-Min*demMin)/(n-demMax-demMin)))
