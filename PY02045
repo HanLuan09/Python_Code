@@ -1,0 +1,9 @@
+s = input()
+
+while(len(s)>1):
+    n = int(len(s)/2 )
+    a = s[:n]
+    b = s[n:]
+    kq = int(a)+int(b)
+    s = str(kq)
+    print(s)
