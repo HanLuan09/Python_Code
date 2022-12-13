@@ -1,0 +1,4 @@
+a = input()
+b = input()
+x = int(input())-1
+print(a[:x:]+b+a[x::])
