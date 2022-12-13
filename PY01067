@@ -1,0 +1,31 @@
+import queue
+
+
+b = [0,1,2]
+def check(n):
+    s= str(n)
+    dem=0
+    for i in range (len(s)):
+        if s[i]=='2':
+            dem+=1
+    if dem > len(s)/2 : return True
+    return False
+t = int(input())
+for i in range(t):
+    n= int(input())
+    q= queue.Queue()
+    q.put(1)
+    q.put(2)
+    ok=0
+    while not q.empty():
+        if ok==n : break
+        tmp = q.get()
+        # ok+=1
+        # print(tmp, end=" ")
+        if check(tmp)==True: 
+            ok+=1
+            print(tmp, end=" ")
+        for i in b:
+            q.put(tmp*10+i)
+    print()
+
