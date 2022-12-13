@@ -1,0 +1,10 @@
+t=int(input())
+for x in range (1,t+1):
+    s1=input()
+    s2=input()
+    a=sorted(s1)
+    b=sorted(s2)
+    print("Test",x,end="")
+    print(":",end=" ")
+    if a==b: print("YES")
+    else: print("NO")
