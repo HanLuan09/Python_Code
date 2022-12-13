@@ -1,0 +1,30 @@
+import functools
+
+def cmp(a, b):
+    if a < b:
+        return 1
+    return -1
+
+n = int(input())
+a, b, c = [], [], []
+while True:
+    x = [int(z) for z in input().split()]
+    a += x
+    if len(a) == n:
+        break
+for i in range(n):
+    if a[i] % 2 != 0:
+        b.append(a[i])
+    else:
+        c.append(a[i])
+
+b = sorted(b)
+c = sorted(c, key=functools.cmp_to_key(cmp))
+for i in a:
+    if i % 2 == 0:
+        print(c[-1], end=" ")
+        c.pop()
+    else:
+        print(b[-1], end=" ")
+        b.pop()
+print()
