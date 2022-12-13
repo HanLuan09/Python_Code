@@ -1,0 +1,12 @@
+from re import S
+
+t=int(input())
+f = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for i in range(t):
+    n,b=[int(x) for x in input().split()]
+    s=""
+    while(n>0):
+        x=n%b
+        s=f[x]+ s
+        n=int(n/b)
+    print(s)
