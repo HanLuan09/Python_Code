@@ -1,0 +1,35 @@
+from itertools import permutations
+
+if __name__ == '__main__':
+    tmp = input()
+    s = list(tmp)
+    perm = permutations(s)
+    for x in list(perm):
+        for j in x:
+            print(j, end = '')
+        print()
+'''
+import itertools
+
+s = [i for i in input()]
+l = list(itertools.accumulate)
+for i in l:
+    print(''.join(i))
+'''
+'''
+x = input()
+n = len(x)
+a = [0] * n
+
+def Try(s, k) :
+    if k == n :
+        print(s)
+        return
+    for i in range(n) :
+        if a[i] == 0 :
+            a[i] = 1
+            Try(s + x[i], k + 1)
+            a[i] = 0
+            
+Try("", 0)
+'''
