@@ -1,0 +1,12 @@
+def Sum(x):
+    tong = 0
+    for i in x:
+        tong += ord(i)-ord('0')
+    return tong
+
+n = input()
+dem = 0
+while (len(n) > 1):
+    n = str(Sum(n))
+    dem += 1
+print(dem)
