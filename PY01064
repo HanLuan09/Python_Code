@@ -1,0 +1,13 @@
+def Tinh(x, k):
+    tmp = pow(2, x-1)
+    if (k == tmp):
+        return x
+    elif (k < tmp):
+        return Tinh(x-1, k)
+    else:
+        return Tinh(x-1, k-tmp)
+
+t = int(input())
+for i in range(t):
+    n, k = [int(x) for x in input().split()]
+    print(chr(Tinh(n, k) + ord('A') - 1))
