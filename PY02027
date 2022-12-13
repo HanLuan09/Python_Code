@@ -1,0 +1,18 @@
+t= int(input())
+a = []
+for i in range (t):
+    s = input()
+    s+='z'
+    tmp = 0
+    for i in range(len(s)):
+        if s[i].isdigit():
+             tmp=tmp*10+int(s[i])
+        else:
+            if tmp!=0:
+                a.append(tmp)
+                tmp =0
+            elif tmp ==0 and s[i-1]=='0':
+                a.append(tmp)
+a = sorted(a)
+for i in a:
+    print(i)
